@@ -1,11 +1,17 @@
 import {pi, power, Foo} from './lib';
 import "@babel/polyfill";
+
+let sum = (a, b) => {
+  return a + b;
+}
 console.log(pi);
 console.log(power(pi, pi));
 
 const f = new Foo();
 console.log(f.foo());
 console.log(f.bar());
+
+console.log(sum(1,3));
 
 // polyfill이 필요한 코드
 console.log(new Promise((resolve,reject) => {
